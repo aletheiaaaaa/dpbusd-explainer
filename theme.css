@@ -1,0 +1,215 @@
+/* Modern programmer theme for Distill */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+html {
+  --title-size:      2.6rem;
+  --body-size:       1.05rem;
+  --code-size:       0.95rem;
+  --aside-size:      0.95rem;
+  --fig-cap-size:    0.9rem;
+
+  --title-color:     #1e1e1e;
+  --header-color:    #2a2a2a;
+  --body-color:      #2f2f2f;
+  --aside-color:     #666;
+  --fig-cap-color:   #777;
+
+  --heading-font:    'Inter', system-ui, sans-serif;
+  --mono-font:       'Fira Code', monospace;
+  --body-font:       'Inter', system-ui, sans-serif;
+  --navbar-font:     'Inter', system-ui, sans-serif;
+}
+
+d-byline {
+  --heading-size:    0.75rem;
+  --heading-color:   #444;
+  --body-size:       0.85rem;
+  --body-color:      #888;
+}
+
+.d-contents {
+  --heading-size:    1.1rem;
+  --contents-size:   1rem;
+}
+
+d-appendix {
+  --heading-size:    1rem;
+  --heading-color:   #222;
+  --text-size:       0.9rem;
+  --text-color:      #666;
+}
+
+.distill-site-header {
+  --title-size:      1.6rem;
+  --text-color:      #f4f4f4;
+  --text-size:       1rem;
+  --hover-color:     #ffffff;
+  --bkgd-color:      #111827;
+}
+
+.distill-site-footer {
+  --text-color:      #bbb;
+  --text-size:       0.9rem;
+  --hover-color:     #fff;
+  --bkgd-color:      #1f2937;
+}
+
+:root {
+  --bg-primary:      #ffffff;
+  --bg-secondary:    #f9fafb;
+  --bg-accent:       #f3f4f6;
+  --border-light:    #e5e7eb;
+  --border-medium:   #d1d5db;
+  --link-color:      #2563eb;
+  --link-hover:      #1d4ed8;
+  --shadow-light:    rgba(0, 0, 0, 0.04);
+  --shadow-medium:   rgba(0, 0, 0, 0.1);
+  --quote-bg:        #f3f4f6;
+  --quote-border:    #93c5fd;
+}
+
+body {
+  background-color: var(--bg-primary);
+  font-feature-settings: "ss01", "zero", "calt";
+  line-height: 1.75;
+}
+
+p {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+d-article p:first-of-type:first-letter {
+  all: unset; /* No drop caps for dev feel */
+}
+
+blockquote {
+  background: var(--quote-bg);
+  border-left: 4px solid var(--quote-border);
+  padding: 1.2rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+  font-style: normal;
+  font-size: 0.95rem;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  border-bottom-color: var(--link-hover);
+}
+
+/* Enhanced code blocks */
+pre {
+  background: #0d1117;
+  color: #c9d1d9;
+  padding: 1.2rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  box-shadow: none;
+  border: 1px solid #30363d;
+  line-height: 1.6;
+}
+
+code {
+  background: #f3f4f6;
+  color: #111827;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+}
+
+th {
+  background: var(--bg-accent);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+img {
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border-light);
+  margin: 2rem 0;
+}
+
+d-title h1 {
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+d-title h1::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--link-color);
+  margin: 1rem auto 0 auto;
+}
+
+d-title p {
+  text-align: center;
+  font-family: var(--navbar-font);
+  font-style: normal;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+em {
+  color: inherit;
+  font-style: italic;
+}
+
+strong {
+  color: inherit;
+  font-weight: 600;
+}
+
+.ornament {
+  display: none; /* Removed for minimalism */
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--fig-cap-color);
+  text-align: center;
+  margin-top: 0.75rem;
+}
